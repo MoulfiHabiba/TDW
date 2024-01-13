@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color:#03071E;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: #eeeded;
+    width: calc(100% - 17px); /* Adjust the 17px according to your scrollbar width */
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.admin{
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    gap: 20px;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px;
+}
+.admin .numbers{
+    display: flex;
+    justify-content: space-between;
+}
+.category:nth-child(2) .numbers, .category:nth-child(4) .numbers{
+    justify-content: space-evenly;
+}
+.admin .name{
+    color: #535252;
+}
+.admin .number{
+    font-weight: 700;
+    font-size: 20px;
+}
+.admin h2{
+    letter-spacing: 3px;
+}
+.admin .content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.item-number{
+    display: flex;
+    gap: 20px;
+   align-items: center;
+}
+.admin-nav{
+    padding: 40px 80px 40px 80px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    margin-left: 17px;
+}
+.admin-nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.admin-nav img{
+    width: 220px;
+}
+.admin-nav #logoutLink , .dashbord{
+    padding: 15px 30px 15px 30px;
+    background-color:#DC2F02;
+    color: white;
+    border-radius: 50px;
+    border: 1px solid #03071E;
+    transition: all .5s;
+
+}
+.admin-nav #logoutLink:hover{
+    background-color: white;
+    color: #03071E;
+}
+.table{
+    padding: 20px 30px 20px 30px;
+    overflow-x: scroll;
+}
+td{
+    padding: 5px;
+}
+th{
+    background-color: white;
+    margin: 10px 0px;
+}
+.dashbord{
+    background-color: #03071E;
+    
+}
+.dashbord:hover{
+    background-color: white;
+    color: #03071E;
+    
+}
+.table .logo{
+    width: 60px;
+}
+#vehiclesSection , #add-section{
+    display: none;
+}
+#brandsButton , #vehiclesButton , #add ,#all{
+    cursor: pointer;
+}
+.nav-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin: 10px 0;
+
+}
+.small-navbar{
+    width: 99%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+.small-navbar div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 1px solid #03071E;
+    font-weight: 700;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+
+.active-btn{
+    background-color: #03071E;
+    color: white;
+
+}
+.sub-menu{
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+    height: 40px;
+    padding: 20px 20px 10px 20px;
+}
+.sub-menu div{
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #535252;
+
+}
+.sub-menu div.active-menu{
+    color: #DC2F02;
+    position: relative;
+}
+.active-menu::after{
+    content: '';
+    height: 3px;
+    position: absolute;
+    border-radius: 3px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+   
+    background-color: #DC2F02;
+}
+#add-section{
+    width: 100%;
+    height: 100%;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+   flex-direction: column;
+   padding: 50px 0;
+}
+#add-section form{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    padding: 50px 30px 40px 30px;
+}
+#add-section .gender_box{
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-around;
+   
+    width: 100%;
+}
+#add-section input{
+    flex: 1;
+    background-color: white;
+    padding: 15px;
+    border: none;
+    border: 1px solid #03071E;
+    border-radius: 5px;
+   
+}
+
+#add-section label{
+    font-weight: 700;
+    font-size: medium;
+    color: #03071E;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 100px; /* Adjust the label width as needed */
+    text-align: right;
+
+}
+#add-section .form_item{
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    
+}
+#add-section .form_item2{
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+#add-section .error_message{
+    background-color: #f6a08b;
+    color:red;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+#add-section .submit_btn{
+    background-color:#03071E ;
+    padding: 15px;
+    color:white;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 40%;
+    flex: 0.1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #03071E;
+    transition: background-color 0.5s;
+    font-weight: 700;
+    font-size: 16px;
+}
+#add-section .submit_btn:hover{
+
+    color:#03071E;
+    background-color: #FFF0F3;
+    border: 2px solid #03071E;
+}
+.actions a , .actions span{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.actions img{
+    width: 20px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    padding:20px;
+    border-radius: 5px;
+    gap: 50px;
+    text-align: center;
+    position: relative;
+}
+.popup-content p{
+    font-size: 20px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+}
+.yes , .no{
+    border: 1px solid #03071E;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.yes{
+    background-color: #DC2F02;
+    color: white;
+    margin-right: 50px;
+
+}
+.no{
+    background-color: white;
+    column-rule: #03071E;
+}
+.yes:hover{
+    background-color: white;
+    color: #DC2F02;
+}
+.no:hover{
+    background-color: #03071E;
+    color: white;
+}
